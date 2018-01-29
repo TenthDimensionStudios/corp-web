@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="Nassiel">    
+      <meta NAME="rights" CONTENT="&copy; 2018 Tenth Dimension">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+      <title>Tenth Dimension Studios</title>	
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="%PUBLIC_URL%/fonts/variables.css" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -20,12 +25,78 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+	
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113330447-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113330447-1');
+    </script>
+
   </head>
-  <body>
+  <body id="main">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    
+    <a id="menu-toggle" href="#" class="btn btn-lg toggle visible-xs"><i class="fa fa-reorder"></i></a>
+    <div id="sidebar-wrapper"></div>
+
+    <div id="top" class="header col-md-12"></div>
+
+    <!-- /Full Page Image Header Area -->
+    <div class="getPageContent">        
+        
+      <div id="content"></div>
+
+      <!-- Intro -->
+      <a id="services" class="anchor"></a>
+      <div class="intro"></div>
+      <!-- /Intro -->
+
+      <!-- Services -->
+      <div id="servicegrp" class="services"></div>
+      
+      <!-- Callout -->
+      <div id="callout" class="callout"></div>
+      <!-- /Callout -->
+
+      <!-- Portfolio - Main Project -->
+      <a id="portfolio" class="anchor"></a>
+      <div class="portfolio"></div>
+
+      <!-- Portfolio - Working Project -->
+      <a id="Activeportfolio" class="anchor"></a>
+      <div class="portfolio"></div>
+
+      <!--- Nuestros trabajos Lista -->
+      <div id="ourwork" class="container"></div>
+
+      <!-- Call to Action -->
+      <a id="team" class="anchor"></a>
+      <div id="teamcall" class="call-to-action" ></div>
+
+      <!-- Contact -->
+      <a id="contact" class="anchor"></a>
+      <div id="forcontact" class="forContact"></div>
+    </div>
+
+    <!-- for lightbox -->
+    <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="lightbox" aria-hidden="true">
+        <div class="modal-dialog">
+          <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="" alt="..." class="img-responsive"/>
+            </div>
+          </div>
+        </div>
+        <!-- /for lightbox -->
+      </div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

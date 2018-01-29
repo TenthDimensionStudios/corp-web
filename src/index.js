@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import './css/animations.css';
+import './css/bootstrap.css';
+import './css/flags.css';
+import './css/main.css';
+//import './css/variables.css';
+import './css/App.css';
+//import App from './App';
+import Sidebar from './Sidebar';
+import Top from './Top';
+import Content from './Content';
+import Services from './Services';
+import Callout from './Callout';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Sidebar />, document.getElementById('sidebar-wrapper'));
+ReactDOM.render(<Top />, document.getElementById('top'));
+ReactDOM.render(<Content />, document.getElementById('content'));
+ReactDOM.render(<Services />, document.getElementById('servicegrp'));
+ReactDOM.render(<Callout />, document.getElementById('callout'));
 registerServiceWorker();
