@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import translation from './data/Translation';
+import Translation from './data/Translation';
 
 class Callout extends Component {
+
+  constructor(props){
+      super(props);
+
+      this.state = {translate: new Translation({})};
+  }
+
     render() {
       return (
         <div className="vert-text">
             <a href="#contact">
-                <h1 className="sansationRegular">{translation.contantIntro}</h1>
+                <h1 className="sansationRegular">{this.state.translate.contantIntro}</h1>
             </a>
         </div>
       );

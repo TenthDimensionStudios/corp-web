@@ -1,10 +1,42 @@
 import React, { Component } from 'react';
-import translation from './data/Translation';
-import lang from './data/Lang';
+import Lang from './data/Lang';
+import axios from 'axios';
+import TopRow from './TopRow';
 
 class Top extends Component {
-    render() {
-      return (
+
+    constructor(props){
+        super(props);
+
+        this.state = {langs: [] };
+    }
+
+    componentDidMount(){
+        var me = this;        
+        var promises = [];
+
+        axios.all(promises).then(
+            axios.get("/data/languajes.json").then(
+                function(response){
+
+                    var rows = []
+                    for(var i = 0; i < response.data.length; i++) {
+                        var item = new Lang(response.data[i]);
+                        rows.push(<TopRow lang={item} app={me.props.app} key={i}/>);
+                    }
+                    
+                    me.setState({langs: rows});
+                }
+            ).catch(
+                function(error){
+                    console.log(error);
+                }
+            )
+        );
+    }
+
+    render() {        
+      return (          
         <div className="vert-text ">
             <a href="#services">
                 <img src="img/logo_Tenth_white.png" className="logoTenth animated fadeInDown" alt="Tenth Dimension Studios Logotype" />
@@ -15,15 +47,8 @@ class Top extends Component {
                         <div className="col-md-12 text-center">
                             <p>First select your language</p>
                         </div>
-                        <div className="col-md-12 text-center">							
-                            <a id="{lang.itemID}" className="languageSelector" ng-repeat="lang in availableLanguajes">
-                                <div className="phoca-box" ng-click="GetLanguage(lang.itemID)">
-                                    <div className="phoca-flagbox">
-                                        <span className="phoca-flag {lang.itemClass}"></span>
-                                    </div>
-                                    <div className="phoca-title">{lang.itemName}</div>
-                                </div>
-                            </a>
+                        <div className="col-md-12 text-center">	            
+                            {this.state.langs}
                         </div>
                     </div>
                 </div>
@@ -39,7 +64,7 @@ class Top extends Component {
                                     <span className="icon">
                                         <i aria-hidden="true" className="icon-services"></i>
                                     </span>
-                                    <span>{translation.Services}</span>
+                                    <span>{this.props.translate.Services}</span>
                                 </a>
                             </div>
                             <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated3s fadeInDown">
@@ -47,7 +72,7 @@ class Top extends Component {
                                     <span className="icon">
                                         <i aria-hidden="true" className="icon-portfolio"></i>
                                     </span>
-                                    <span>{translation.Portfolio}</span>
+                                    <span>{this.props.translate.Portfolio}</span>
                                 </a>
                             </div>
                             <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated4s fadeInDown">
@@ -55,7 +80,7 @@ class Top extends Component {
                                     <span className="icon">
                                         <i aria-hidden="true" className="icon-team"></i>
                                     </span>
-                                    <span>{translation.Team}</span>
+                                    <span>{this.props.translate.Team}</span>
                                 </a>
                             </div>
                             <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated5s fadeInDown">
@@ -63,7 +88,7 @@ class Top extends Component {
                                     <span className="icon">
                                         <i aria-hidden="true" className="icon-contact"></i>
                                     </span>
-                                    <span>{translation.Contact}</span>
+                                    <span>{this.props.translate.Contact}</span>
                                 </a>
                             </div>
                         </nav>
