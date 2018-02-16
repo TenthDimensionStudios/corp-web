@@ -4,6 +4,7 @@ import Top from './Top';
 import Content from './Content';
 import Services from './Services';
 import Callout from './Callout';
+import Portfolio from './Portfolio';
 import Translation from './data/Translation';
 
 class App extends Component {
@@ -23,13 +24,11 @@ class App extends Component {
             <div id="top" className="header col-md-12">{<Top app={this} translate={this.state.translate} />}</div>
 
             {/* Full Page Image Header Area */}
-            <div className="getPageContent">        
-                
-              <div id="content"><Content translate={this.state.translate} /></div>
+            <div className="getPageContent">
 
               {/* Intro */}
               <a id="services" className="anchor"></a>
-              <div className="intro"></div>
+              <div id="content" className="intro"><Content translate={this.state.translate} /></div>
               {/* /Intro */}
 
               {/* Services */}
@@ -41,7 +40,7 @@ class App extends Component {
 
               {/* Portfolio - Main Project */}
               <a id="portfolio" className="anchor"></a>
-              <div className="portfolio"></div>
+              <div className="portfolio"><Portfolio translate={this.state.translate} /></div>
 
               {/* Portfolio - Working Project */}
               <a id="Activeportfolio" className="anchor"></a>
