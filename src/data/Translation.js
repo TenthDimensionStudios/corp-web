@@ -10,7 +10,7 @@ class Translation {
         this.introHead = props.introHead;
         this.introContent = props.introContent;
         this.introReference = props.introReference;
-        
+
         this.contantIntro = props.contantIntro;
 
         this.servicesHead = props.servicesHead;
@@ -51,7 +51,22 @@ class Translation {
         this.workingProjectLink = props.workingProjectLink;
         this.workingProjectInfo = props.workingProjectInfo;
 
+        this.otherProyectsHeader = props.otherProyectsHeader;
+        this.otherProyects = props.otherProyects;
+        
+        this.outTeam = props.outTeam;
+        this.teamAdd = props.teamAdd;
+        this.teamInfo = props.teamInfo;
 
+        this.contactHead = props.contactHead;
+        this.contactHeadText = props.contactHeadText;
+        this.contactName = props.contactName;
+        this.contactEmail = props.contactEmail;
+        this.contactText = props.contactText;
+        this.contactSend = props.contactSend;
+
+        this.socialHead = props.socialHead;
+        this.socialWebs = props.socialWebs;
     }
 }
 

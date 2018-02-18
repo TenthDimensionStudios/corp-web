@@ -1,27 +1,8 @@
 import React, { Component } from 'react';
-
-
-function GetID() {
-    // Math.random should be unique because of its seeding algorithm.
-    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-    // after the decimal.
-    return '_' + Math.random().toString(36).substr(2, 9);
-  };
-
-class OthersLink extends Component{
-    render(){
-        return(
-        <div className="col-sm-3 col-xs-6">
-            <a href="#" data-toggle="modal" data-target="#lightbox">
-                <img className="img-responsive portfolio-item" src={this.props.lnk}  alt="..." ng-click="modalLightbox(lnk,$event)"/>
-            </a>
-        </div>	
-        );
-    }
-}
+import OthersLink from './OthersLink';
+import { GetID } from './Functions';
 
 class Portfolio extends Component {
-
 
     render() {
         var rows = [];
