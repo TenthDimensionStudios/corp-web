@@ -120,7 +120,7 @@ class App extends Component {
               <button type="button" className="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
               <div className="modal-content">
                 <div className="modal-body">
-                  <img src="" alt="..." className="img-responsive"/>
+                  <img src="" alt="..." className="img-fluid"/>
                 </div>
               </div>
             </div>

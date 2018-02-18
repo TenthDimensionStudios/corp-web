@@ -27,7 +27,7 @@ class TeamMember extends Component{
             <div className="social">
                 {rows}
             </div>
-            <img className="img-responsive img-circle front margin0auto" src={"img/" + this.props.colab.img} alt="..." />
+            <img className="img-fluid rounded-circle front margin0auto" src={"img/" + this.props.colab.img} alt="..." />
             <h3 className="sansationLightRegular">{this.props.colab.name}</h3>
             <p className="sansationLightRegular descUser">{this.props.colab.rol}</p>
         </div>
@@ -56,7 +56,7 @@ class Team extends Component{
 
                     <div className="col-md-3 col-xs-6 colaborator text-center">
 
-                        <img className="img-responsive img-circle front margin0auto" src="img/blank_foto.jpeg" alt="..." />
+                        <img className="img-fluid rounded-circle front margin0auto" src="img/blank_foto.jpeg" alt="..." />
                         <h3 className="sansationLightRegular">{this.props.translate.teamAdd}</h3>
                         <p className="sansationLightRegular descUser"><a className="whiteLink" href="#contact">{this.props.translate.teamAddInfo}</a></p>
                     </div>

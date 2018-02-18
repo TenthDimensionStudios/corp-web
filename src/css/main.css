@@ -71,7 +71,8 @@ a.anchor {
 .btn {
   font-weight: normal;
   padding: 10px 20px;
-  color: #c13650;
+  /*color: #c13650;*/
+  color: #3650c1;
   border: 0px;
   border-radius: 0px;
   background: #f2f2f2;
@@ -711,6 +712,7 @@ i.scroll:hover {
 }
 footer .socialLinks li {
   display: inline-table;
+  margin-left: 1em;
 }
 footer .socialLinks a i {
   color: #fff;

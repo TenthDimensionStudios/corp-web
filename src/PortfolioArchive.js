@@ -6,7 +6,7 @@ class PortfolioArchiveLinks extends Component{
         return(
         <div className="col-sm-3 col-xs-6">
             <a href="#" className="" data-toggle="modal" data-target="#lightbox">
-                <img className="img-responsive portfolio-item" src={this.props.lnk} alt="..." ng-click="modalLightbox(lnk,$event)"/>
+                <img className="img-fluid portfolio-item" src={this.props.lnk} alt="..." ng-click="modalLightbox(lnk,$event)"/>
             </a>
         </div>
         );
@@ -41,7 +41,7 @@ class PortfolioArchive extends Component {
                 <div className="row">
                     <div className="col-md-8">
                         <a href="#" className="" data-toggle="modal" data-target="#lightbox" >
-                            <img className="img-responsive" src={this.props.translate.workingProjectImage}  ng-click="modalLightbox(translation.workingProjectImage,$event)" alt="..."/>
+                            <img className="img-fluid" src={this.props.translate.workingProjectImage}  ng-click="modalLightbox(translation.workingProjectImage,$event)" alt="..."/>
                         </a>
                     </div>
 

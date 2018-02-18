@@ -58,7 +58,7 @@ class Top extends Component {
                 <div id="forHomeMenu" className="col-md-12 text-center forHomeMenu">
 
                     <div className="container">
-                        <nav id="menu" className="tenthNav">
+                        <nav id="menu" className="tenthNav row">
                             <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated2s fadeInDown">
                                 <a href="#services">
                                     <span className="icon">

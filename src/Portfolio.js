@@ -37,7 +37,7 @@ class Portfolio extends Component {
                     <div className="row">
                         <div className="col-md-8">
                             <a href="#" data-toggle="modal" data-target="#lightbox">
-                                <img className="img-responsive" src={this.props.translate.mainProjectImage} alt="..." ng-click="modalLightbox(translation.mainProjectImage,$event)"/>
+                                <img className="img-fluid" src={this.props.translate.mainProjectImage} alt="..." ng-click="modalLightbox(translation.mainProjectImage,$event)"/>
                             </a>
                         </div>
 
@@ -54,10 +54,12 @@ class Portfolio extends Component {
                     </div>
                     
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 row">
                             <h3 className="sansationLightRegular">{this.props.translate.mainProjectOthers}</h3>
                         </div>
-                        {rowsOL}				
+                        <div className="col-lg-12 row">
+                            {rowsOL}				
+                        </div>
                     </div>
                     
                 </div>

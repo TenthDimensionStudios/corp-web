@@ -12,7 +12,7 @@ class Services extends Component {
             </div>
         </div>
         <div className="row">
-            <div className="col-md-12 col-xs-12">
+            <div className="col-md-12 col-xs-12 row">
             <div className="col-md-3 text-center">
                 <div className="service-item">
                     <i className="service-icon fa fa-cogs"></i>
@@ -40,7 +40,7 @@ class Services extends Component {
             </div>				
         </div>
         <div className="row">
-            <div className="col-md-12 col-xs-12">
+            <div className="col-md-12 col-xs-12 row">
             
             <div className="col-md-6 text-center">
                 <div className="service-item">
