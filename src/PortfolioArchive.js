@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import { GetID } from './Functions';
+import Image from './Image'
 
 class PortfolioArchiveLinks extends Component{
     render(){
         return(
         <div className="col-sm-3 col-xs-6">
-            <a href="#" className="" data-toggle="modal" data-target="#lightbox">
-                <img className="img-fluid portfolio-item" src={this.props.lnk} alt="..." ng-click="modalLightbox(lnk,$event)"/>
-            </a>
+            <Image url={this.props.lnk} alt="..."/>
         </div>
         );
     }
 }
 
 class PortfolioArchive extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {collapsed: true};
+    }
 
     render() {
         var rows = [];
@@ -32,6 +37,8 @@ class PortfolioArchive extends Component {
             }
         }
 
+        var collapseCName = this.state.collapsed ? "row collapse" : "row";
+
       return (
         <div className="projectDetails">
             {/* Detalle de un proyecto */}
@@ -40,9 +47,7 @@ class PortfolioArchive extends Component {
 
                 <div className="row">
                     <div className="col-md-8">
-                        <a href="#" className="" data-toggle="modal" data-target="#lightbox" >
-                            <img className="img-fluid" src={this.props.translate.workingProjectImage}  ng-click="modalLightbox(translation.workingProjectImage,$event)" alt="..."/>
-                        </a>
+                        <Image url={this.props.translate.workingProjectImage} alt="..."/>
                     </div>
 
                     <div className="col-md-4">
@@ -51,14 +56,19 @@ class PortfolioArchive extends Component {
                         <h3 className="sansationRegular">{this.props.translate.workingProjectDetailsHeader}</h3>
                         <ul>
                             {rows}
-                            <li className="webLink"><a href={this.props.translate.workingProjectLink}>{this.props.translate.workingProjectLinkText}</a></li>
-
+                            <li className="webLink">
+                                <a href={this.props.translate.workingProjectLink}>
+                                    {this.props.translate.workingProjectLinkText}
+                                </a>
+                            </li>
                         </ul>
-                        <button className="btn btn-primary pull-right">{this.props.translate.workingProjectAsk}</button>
+                        <button className="btn btn-primary pull-right" onClick={() => this.setState({collapsed: !this.state.collapsed})}>
+                            {this.props.translate.workingProjectAsk}
+                        </button>
                     </div>
 
                 </div>
-                <div className="row">
+                <div className={collapseCName}>
 
                     <div className="col-lg-12">
                         <h3 className="sansationLightRegular">{this.props.translate.workingProjectOthers}</h3>

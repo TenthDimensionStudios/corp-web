@@ -37,6 +37,7 @@ a.anchor {
 @media (min-width: 768px) {
   .sticky {
     box-shadow: 0px 0px 20px #333;
+    max-width: 100% !important;
   }
   .sticky .tenthNav {
     height: 160px !important;
@@ -49,6 +50,12 @@ a.anchor {
   }
 }
 @media (max-width: 800px) {
+
+  .sticky {
+    box-shadow: 0px 0px 20px #333;
+    display: none;
+  }
+
   .sticky .tenthNav .menuItem span {
     font-size: 16px;
   }
@@ -133,7 +140,6 @@ a.anchor {
 .icon-contact,
 .icon-menu {
   font-family: 'icomoon';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -162,6 +168,11 @@ a.anchor {
 .icon-menu:before {
   content: "\f0c9";
 }
+
+.serviceh4{
+  margin-top: 1rem;
+}
+
 .tenthNav a,
 .tenthNav .menuItem {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -425,7 +436,7 @@ a.anchor {
 }
 #menu-toggle {
   top: 0;
-  right: 0;
+  left: 0;
   position: fixed;
   z-index: 1;
 }
@@ -595,6 +606,7 @@ i.service-icon {
   box-shadow: 0px 0px 10px #333;
   margin: 10px auto;
   clear: both;
+  transition: all .5s;
   -webkit-transition: all .5s;
   /* Safari */
 
@@ -613,6 +625,7 @@ i.service-icon {
 }
 .colaborator:hover img {
   opacity: 0.5;
+  transition: all .5s;
   -webkit-transition: all .5s;
   /* Safari */
 

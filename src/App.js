@@ -49,19 +49,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <a id="menu-toggle" href="#" className="btn btn-lg toggle visible-xs"><i className="fa fa-reorder"></i></a>
-        <div id="sidebar-wrapper" className="">{<Sidebar />}</div>
+      <div>        
+        {<Sidebar />}
 
-        <div id="top" className="header col-md-12">{<Top app={this} translate={this.state.translate} />}</div>
+        {<Top app={this} translate={this.state.translate} />}
 
         {/* Full Page Image Header Area */}
         <div className="getPageContent">
 
           {/* Intro */}
-          <a id="services" className="anchor"></a>
-          <div id="content" className="intro"><Content translate={this.state.translate} /></div>
-          {/* /Intro */}
+          <a id="services" className="anchor" href="#services">
+            <div id="content" className="intro">
+              <Content translate={this.state.translate} />
+            </div>
+          </a>
 
           {/* Services */}
           <div id="servicegrp" className="services"><Services translate={this.state.translate} /></div>
@@ -71,60 +72,55 @@ class App extends Component {
           {/* /Callout */}
 
           {/* Portfolio - Main Project */}
-          <a id="portfolio" className="anchor"></a>
-          <div className="portfolio"><Portfolio translate={this.state.translate} /></div>
+          <a id="portfolio" className="anchor" href="#portfolio">
+            <div className="portfolio"><Portfolio translate={this.state.translate} /></div>
+          </a>
 
           {/* Portfolio - Working Project */}
-          <a id="Activeportfolio" className="anchor"></a>
-          <div className="portfolio">
-            <div className="container">
-              <div className="row">
-                  <div className="col-md-4 col-md-offset-4 text-center">
-                      <h2 className="sansationLightRegular">{this.state.translate.activePortfolioIntro}</h2>
-                      <hr/>
-                  </div>
-              </div>
-            </div>
-            {/* Container */}
-            <PortfolioArchive translate={this.state.translate} />
-          </div>
-
-          {/* Nuestros trabajos Lista */}
-          <div id="ourwork" className="container"><OurWork translate={this.state.translate} /></div>
-
-          {/* Call to Action */}
-          <a id="team" className="anchor"></a>
-          <div id="teamcall" className="call-to-action" ><Team translate={this.state.translate} /></div>
-
-          {/* Contact */}
-          <a id="contact" className="anchor"></a>
-          <div id="forcontact" className="forContact">
-
-            <Contact translate={this.state.translate} />
-
-            <Footer translate={this.state.translate} />
-
-            {/* for going top of page */}
-            <p id="back-top" style={pStyle}>
-              <a href="#featured">
-                <span><i className="fa fa-fw"></i></span>
-              </a>
-            </p>
-            {/* /for going top of page */}
-          </div>
-        </div>
-
-        {/* for lightbox */}
-        <div id="lightbox" className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="lightbox" aria-hidden="true">
-            <div className="modal-dialog">
-              <button type="button" className="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
-              <div className="modal-content">
-                <div className="modal-body">
-                  <img src="" alt="..." className="img-fluid"/>
+          <a id="Activeportfolio" className="anchor" href="#Activeportfolio">
+            <div className="portfolio">
+              <div className="container">
+                <div className="row">
+                    <div className="col-md-4 col-md-offset-4 text-center">
+                        <h2 className="sansationLightRegular">{this.state.translate.activePortfolioIntro}</h2>
+                        <hr/>
+                    </div>
                 </div>
               </div>
+              {/* Container */}
+              <PortfolioArchive translate={this.state.translate} />
             </div>
-        {/* /for lightbox */}
+          </a>
+
+          {/* Nuestros trabajos Lista */}
+          <div id="ourwork" className="container">
+            <OurWork translate={this.state.translate} />
+          </div>
+
+          {/* Call to Action */}
+          <a id="team" className="anchor" href="#team">
+            <div id="teamcall" className="call-to-action" >
+              <Team translate={this.state.translate} />
+            </div>
+          </a>
+
+          {/* Contact */}
+          <a id="contact" className="anchor" href="#contact">
+            <div id="forcontact" className="forContact">
+
+              <Contact translate={this.state.translate} />
+
+              <Footer translate={this.state.translate} />
+
+              {/* for going top of page */}
+              <p id="back-top" style={pStyle}>
+                <a href="#featured">
+                  <span><i className="fa fa-fw"></i></span>
+                </a>
+              </p>
+              {/* /for going top of page */}
+            </div>
+          </a>
         </div>
       </div>
     );
