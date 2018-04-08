@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import OthersLink from './OthersLink';
+import Image from './Image'
 import { GetID } from './Functions';
 
 class Portfolio extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {collapsed: true};
+    }
 
     render() {
         var rows = [];
@@ -20,8 +27,9 @@ class Portfolio extends Component {
                 rowsOL.push(<OthersLink lnk={this.props.translate.mainProjectOthersLink[i2]} key={GetID()} />);
             }
         }
+        var collapseCName = this.state.collapsed ? "row collapse" : "row";
 
-      return (
+      return (          
         <div className="container">
             <div className="container">
                 <div className="row">
@@ -36,9 +44,7 @@ class Portfolio extends Component {
 
                     <div className="row">
                         <div className="col-md-8">
-                            <a href="#" data-toggle="modal" data-target="#lightbox">
-                                <img className="img-fluid" src={this.props.translate.mainProjectImage} alt="..." ng-click="modalLightbox(translation.mainProjectImage,$event)"/>
-                            </a>
+                            <Image url={this.props.translate.mainProjectImage} alt="..."/>
                         </div>
 
                         <div className="col-md-4">
@@ -49,11 +55,11 @@ class Portfolio extends Component {
                                 {rows}                           
                                 <li className="webLink"><a href={this.props.translate.mainProjectLink}>{this.props.translate.mainProjectLinkText}</a></li>
                             </ul>
-                            <button className="btn btn-primary pull-right">{this.props.translate.mainProjectAsk}</button>
+                            <button className="btn btn-primary pull-right" onClick={() => this.setState({collapsed: !this.state.collapsed})}>{this.props.translate.mainProjectAsk}</button>
                         </div>
                     </div>
                     
-                    <div className="row">
+                    <div className={collapseCName}>
                         <div className="col-lg-12 row">
                             <h3 className="sansationLightRegular">{this.props.translate.mainProjectOthers}</h3>
                         </div>

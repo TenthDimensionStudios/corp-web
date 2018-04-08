@@ -11,7 +11,7 @@ class Contact extends Component{
                 <div className="col-md-6 col-xs-12">
 
                     {/* Form */}
-                    <form className="form-horizontal" role="form" ng-submit="SubmitContact()">
+                    <form className="form-horizontal" ng-submit="SubmitContact()">
                         <div className="form-group">
                             <label htmlFor="inputEmail3" className="col-md-3 col-xs-3 control-label sansationLightRegular">{this.props.translate.contactName}</label>
                             <div className="col-md-12 col-xs-12">
