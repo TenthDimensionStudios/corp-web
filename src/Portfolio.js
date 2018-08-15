@@ -33,13 +33,13 @@ class Portfolio extends Component {
         <div className="container">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4 col-md-offset-4 text-center">
+                    <div className="col align-self-center text-center">
                         <h2 className="sansationLightRegular">{this.props.translate.portfolioIntro}</h2>
                         <hr/>
                     </div>
                 </div>
             </div>
-            <div className="projectDetails">
+            <div className="projectDetails container">
                 <div className="container">
 
                     <div className="row">

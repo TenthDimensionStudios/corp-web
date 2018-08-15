@@ -58,11 +58,10 @@ class App extends Component {
         <div className="getPageContent">
 
           {/* Intro */}
-          <a id="services" className="anchor" href="#services">
+          <a id="services" className="anchor" href="#services" />
             <div id="content" className="intro">
               <Content translate={this.state.translate} />
             </div>
-          </a>
 
           {/* Services */}
           <div id="servicegrp" className="services"><Services translate={this.state.translate} /></div>
@@ -72,16 +71,15 @@ class App extends Component {
           {/* /Callout */}
 
           {/* Portfolio - Main Project */}
-          <a id="portfolio" className="anchor" href="#portfolio">
+          <a id="portfolio" className="anchor" href="#portfolio" />
             <div className="portfolio"><Portfolio translate={this.state.translate} /></div>
-          </a>
 
           {/* Portfolio - Working Project */}
-          <a id="Activeportfolio" className="anchor" href="#Activeportfolio">
+          <a id="Activeportfolio" className="anchor" href="#Activeportfolio" />
             <div className="portfolio">
               <div className="container">
                 <div className="row">
-                    <div className="col-md-4 col-md-offset-4 text-center">
+                    <div className="col self-align-center text-center">
                         <h2 className="sansationLightRegular">{this.state.translate.activePortfolioIntro}</h2>
                         <hr/>
                     </div>
@@ -90,7 +88,6 @@ class App extends Component {
               {/* Container */}
               <PortfolioArchive translate={this.state.translate} />
             </div>
-          </a>
 
           {/* Nuestros trabajos Lista */}
           <div id="ourwork" className="container">
@@ -98,14 +95,13 @@ class App extends Component {
           </div>
 
           {/* Call to Action */}
-          <a id="team" className="anchor" href="#team">
+          <a id="team" className="anchor" href="#team" />
             <div id="teamcall" className="call-to-action" >
               <Team translate={this.state.translate} />
             </div>
-          </a>
 
           {/* Contact */}
-          <a id="contact" className="anchor" href="#contact">
+          <a id="contact" className="anchor" href="#contact" />
             <div id="forcontact" className="forContact">
 
               <Contact translate={this.state.translate} />
@@ -120,7 +116,6 @@ class App extends Component {
               </p>
               {/* /for going top of page */}
             </div>
-          </a>
         </div>
       </div>
     );

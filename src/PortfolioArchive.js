@@ -40,7 +40,7 @@ class PortfolioArchive extends Component {
         var collapseCName = this.state.collapsed ? "row collapse" : "row";
 
       return (
-        <div className="projectDetails">
+        <div className="projectDetails container">
             {/* Detalle de un proyecto */}
         
             <div className="container">
