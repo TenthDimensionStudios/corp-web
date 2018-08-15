@@ -1,0 +1,747 @@
+/* Colors Styles */
+/** For hyperlinks **/
+/*** Fonts ***/
+/*** Global styles **/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Sans-Serif !important;
+  margin: 0px;
+  padding: 0px;
+}
+/** Links **/
+a {
+  color: #c13650;
+  cursor: pointer;
+}
+a.whiteLink {
+  color: #fff !important;
+  text-decoration: underline;
+}
+a:visited,
+a:hover {
+  color: #8e031d;
+}
+a.noTextDecoration,
+a.noTextDecoration:hover,
+a.noTextDecoration:focus {
+  text-decoration: none !important;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -9em;
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .sticky {
+    box-shadow: 0px 0px 20px #333;
+  }
+  .sticky .tenthNav {
+    height: 160px !important;
+  }
+  .sticky .tenthNav .icon {
+    padding-top: 20px !important;
+  }
+  .sticky .tenthNav a {
+    height: 160px !important;
+  }
+}
+@media (max-width: 800px) {
+  .sticky .tenthNav .menuItem span {
+    font-size: 16px;
+  }
+  .sidebar-nav.tenthNav {
+    overflow: hidden;
+  }
+  .sidebar-nav.tenthNav .menuItem,
+  .sidebar-nav.tenthNav .menuItem a {
+    padding-top: 0px;
+    height: 5em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sidebar-nav.tenthNav .menuItem .icon,
+  .sidebar-nav.tenthNav .menuItem a .icon {
+    padding: 15px;
+  }
+}
+/** Buttons **/
+.btn {
+  font-weight: normal;
+  padding: 10px 20px;
+  /*color: #c13650;*/
+  color: #3650c1;
+  border: 0px;
+  border-radius: 0px;
+  background: #f2f2f2;
+}
+.btn:hover {
+  background-color: #c13650;
+}
+.btn.primary {
+  background-color: #c13650;
+  border-color: #d15970;
+}
+.btn.primary:hover,
+.btn.primary:active {
+  background-color: #ad3048;
+  border: #992b3f;
+}
+.forContact .btn.primary {
+  background-color: #f2f2f2;
+  color: #c13650;
+}
+.forContact .btn.primary:hover,
+.forContact btn.primary:active {
+  background-color: #e5e5e5;
+}
+/*** For top text **/
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.vert-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+  color: #222222;
+  text-shadow: 0px 0px 2px #666;
+}
+.vert-text h2 {
+  color: #f2f2f2;
+  font-size: 1.5em;
+}
+.vert-text a {
+  color: #fff;
+  text-decoration: none;
+}
+.vert-text img {
+  width: 80%;
+  min-width: 300px;
+  max-width: 1280px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.icon-team,
+.icon-portfolio,
+.icon-services,
+.icon-contact,
+.icon-menu {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-team:before {
+  content: "\e000";
+}
+.icon-blog:before {
+  content: "\e001";
+}
+.icon-home:before {
+  content: "\e002";
+}
+.icon-portfolio:before {
+  content: "\e003";
+}
+.icon-services:before {
+  content: "\e004";
+}
+.icon-contact:before {
+  content: "\e005";
+}
+.icon-menu:before {
+  content: "\f0c9";
+}
+.tenthNav a,
+.tenthNav .menuItem {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Global CSS that are applied for all screen sizes */
+.tenthNav {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 1.5em;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -ms-transition: all 2s;
+  transition: all 2s;
+}
+.tenthNav .menuItem span {
+  display: block;
+}
+.tenthNav a {
+  display: block;
+  color: rgba(249, 249, 249, 0.9);
+  text-decoration: none;
+  -webkit-transition: color .5s, background .2s, height 1s;
+  -moz-transition: color .5s, background .2s, height 1s;
+  -o-transition: color .5s, background .2s, height 1s;
+  -ms-transition: color .5s, background .2s, height 1s;
+  transition: color .5s, background .2s, height 1s;
+}
+.tenthNav i {
+  /* Make the font smoother for Chrome */
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.sticky.forHomeMenu {
+  z-index: 999;
+  width: 100%;
+}
+.sticky .tenthNav {
+  margin-top: 0px !important;
+}
+.sticky .tenthNav a {
+  height: 11em;
+}
+/* Remove the blue Webkit background when element is tapped */
+.menuItem a,
+.menuItem button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Hover effect for the whole tenthNavigation to make the hovered item stand out */
+.no-touch .tenthNav ul:hover a {
+  color: rgba(249, 249, 249, 0.5);
+}
+.no-touch .tenthNav ul:hover a:hover {
+  color: rgba(249, 249, 249, 0.99);
+}
+/* Adding some background color to the different menu items */
+.tenthNav .menuItem {
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -o-transition: background 1s;
+  -ms-transition: background 1s;
+  transition: background 1s;
+}
+.tenthNav .menuItem:nth-child(6n+1):hover {
+  background: #d06503;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+.tenthNav .menuItem:nth-child(6n+2):hover {
+  background: #e9931a;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+.tenthNav .menuItem:nth-child(6n+3):hover {
+  background: #1691be;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+.tenthNav .menuItem:nth-child(6n+4):hover {
+  background: #166ba2;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+.tenthNav .menuItem:nth-child(6n+5):hover {
+  background: #1b3647;
+  -webkit-transition: border .5s;
+  -moz-transition: border .5s;
+  -o-transition: border .5s;
+  -ms-transition: border .5s;
+  transition: border .5s;
+}
+.tenthNav .menuItem:nth-child(6n+6):hover {
+  background: #152836;
+  -webkit-transition: border .5s;
+  -moz-transition: border .5s;
+  -o-transition: border .5s;
+  -ms-transition: border .5s;
+  transition: border .5s;
+}
+/* Transforms the list into a horizontal tenthNavigation */
+.tenthNav .itemMenu {
+  text-align: center;
+  -webkit-transition: border .5s;
+  -moz-transition: border .5s;
+  -o-transition: border .5s;
+  -ms-transition: border .5s;
+  transition: border .5s;
+}
+.tenthNav a {
+  display: block;
+}
+/* hover, focused and active effects that add a little colored border to the different items */
+.no-touch .tenthNav li:nth-child(6n+1) a:hover,
+.no-touch .tenthNav li:nth-child(6n+1) a:active,
+.no-touch .tenthNav li:nth-child(6n+1) a:focus {
+  border-bottom: 4px solid #ae4e01;
+}
+.no-touch .tenthNav li:nth-child(6n+2) a:hover,
+.no-touch .tenthNav li:nth-child(6n+2) a:active,
+.no-touch .tenthNav li:nth-child(6n+2) a:focus {
+  border-bottom: 4px solid #bf7514;
+}
+.no-touch .tenthNav li:nth-child(6n+3) a:hover,
+.no-touch .tenthNav li:nth-child(6n+3) a:active,
+.no-touch .tenthNav li:nth-child(6n+3) a:focus {
+  border-bottom: 4px solid #0c6e95;
+}
+.no-touch .tenthNav li:nth-child(6n+4) a:hover,
+.no-touch .tenthNav li:nth-child(6n+4) a:active,
+.no-touch .tenthNav li:nth-child(6n+4) a:focus {
+  border-bottom: 4px solid #0a4b75;
+}
+.no-touch .tenthNav li:nth-child(6n+5) a:hover,
+.no-touch .tenthNav li:nth-child(6n+5) a:active,
+.no-touch .tenthNav li:nth-child(6n+5) a:focus {
+  border-bottom: 4px solid #10222c;
+}
+.no-touch .tenthNav li:nth-child(6n+6) a:hover,
+.no-touch .tenthNav li:nth-child(6n+6) a:active,
+.no-touch .tenthNav li:nth-child(6n+6) a:focus {
+  border-bottom: 4px solid #091219;
+}
+/* Placing the icon */
+.icon {
+  padding-top: 1.4em;
+}
+.icon + span {
+  margin-top: 1em;
+  -webkit-transition: margin .5s;
+  -moz-transition: margin .5s;
+  -o-transition: margin .5s;
+  -ms-transition: margin .5s;
+  transition: margin .5s;
+  font-family: 'sansation_lightregular' !important;
+}
+/* Animating the height of the element*/
+.tenthNav a {
+  height: 9em;
+}
+/* Making the text follow the height animation */
+.no-touch .tenthNav a:hover .icon + span {
+  margin-top: 1.5em;
+  -webkit-transition: margin .5s;
+  -moz-transition: margin .5s;
+  -o-transition: margin .5s;
+  -ms-transition: margin .5s;
+  transition: margin .5s;
+}
+/* Positioning the icons and preparing for the animation*/
+.tenthNav i {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.4em;
+  border-radius: 50%;
+  font-size: 1.8em;
+  box-shadow: 0 0 0 30px transparent;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: box-shadow 0.6s ease-in-out;
+  -moz-transition: box-shadow 0.6s ease-in-out;
+  -o-transition: box-shadow 0.6s ease-in-out;
+  -ms-transition: box-shadow 0.6s ease-in-out;
+  transition: box-shadow 0.6s ease-in-out;
+}
+/* Animate the box-shadow to create the effect */
+.no-touch .tenthNav a:hover i,
+.no-touch .tenthNav a:active i,
+.no-touch .tenthNav a:focus i {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  -webkit-transition: box-shadow 0.4s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  -ms-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+}
+/* CSS specific to the 2x3 columns version */
+@media (min-width: 32.5em) and (max-width: 49.938em) {
+  /* Adding some padding to make the elements look nicer*/
+  .tenthNav a {
+    padding: 0.8em;
+  }
+  .icon + span {
+    position: relative;
+    top: -0.2em;
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-nav li {
+  /*line-height: 40px;
+  text-indent: 20px;*/
+
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+.sidebar-nav li a {
+  color: #f2f2f2;
+  display: block;
+  text-decoration: none;
+}
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+#menu-toggle {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+}
+#sidebar-wrapper.active {
+  right: 100px;
+  width: 100px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.toggle {
+  margin: 5px 5px 0 0;
+}
+/* For Bubbles */
+/* / For bubbles */
+/* Full Page Image Header Area */
+.header {
+  display: table;
+  height: 100%;
+  position: relative;
+  background-color: #222222;
+}
+.bubbles {
+  position: absolute;
+}
+
+/* Intro */
+.intro {
+  padding: 50px 0;
+}
+/* for Language Menu */
+.languageMenu {
+  background-color: rgba(222, 222, 222, 0.2);
+  padding: 0;
+  margin: 50px -15px;
+  box-shadow: 0px 0px 30px rgba(222, 222, 222, 0.2);
+}
+.languageMenu .phoca-box {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.35s ease-in-out;
+}
+.languageMenu .phoca-box:hover {
+  box-shadow: inset 0px 0px 50px #222;
+  opacity: 1;
+}
+.languageMenu .phoca-box:active {
+  box-shadow: 0px 0px 3px #fff;
+  background-color: #fff;
+}
+@media (max-width: 992px) {
+  .languageMenu .phoca-box {
+    width: 22%;
+  }
+}
+.languageMenu p {
+  margin: 20px 0;
+  color: #fff;
+}
+/* Services */
+.services {
+  background: #c13650;
+  padding: 50px 0;
+  color: #fff;
+  box-shadow: inset 0px 0px 30px #222222;
+}
+.service-item {
+  margin-bottom: 15px;
+  padding: 30px 10px;
+  transition: all 0.5s ease-in-out;
+  height: 400px;
+}
+.service-item a {
+  color: #f2f2f2;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff !important;
+  transition: all 0.5s ease-in-out;
+}
+.service-item a:hover {
+  text-decoration: none !important;
+  color: #e1e1e1;
+  padding-bottom: 2px;
+}
+i.service-icon {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle;
+  text-align: center;
+}
+.featuredContent .service-item {
+  background-color: #fff;
+  box-shadow: none !important;
+  box-shadow: 0px 0px 50px #333 !important;
+  color: #c13650;
+}
+.featuredContent:hover .service-item * {
+  transition: all 1s linear;
+}
+.featuredContent .service-icon {
+  border-color: #c13650;
+}
+.featuredContent a {
+  color: #222222;
+  text-decoration: none !important;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #222222 !important;
+}
+.featuredContent:hover a {
+  color: #c13650;
+  padding-bottom: 3px;
+  border-bottom: 1px dotted #c13650 !important;
+}
+.featuredContent .service-item:hover {
+  color: #222222;
+}
+.featuredContent .service-item:hover i {
+  border-color: #222222;
+  transition: all 1s linear;
+}
+
+.callout .vert-text h1 {
+  color: #fff !important;
+}
+/* Portfolio */
+.portfolio {
+  padding: 50px 0;
+}
+.portfolio-item {
+  margin-bottom: 25px;
+}
+.img-portfolio {
+  margin: 0 auto;
+}
+/** Arrow Down **/
+.btnMoreWorks .fa-angle-up {
+  display: block;
+}
+.btnMoreWorks .fa-angle-down {
+  display: none;
+}
+.btnMoreWorks.collapsed .fa-angle-down {
+  display: block;
+}
+.btnMoreWorks.collapsed .fa-angle-up {
+  display: none;
+}
+.projectDetails {
+  padding-top: 30px;
+  box-shadow: 0px 0px 10px #e1e1e1;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+.colaborator img {
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 10px #333;
+  margin: 10px auto;
+  clear: both;
+  -webkit-transition: all .5s;
+  /* Safari */
+
+  opacity: 1;
+}
+/** Social **/
+.colaborator .social a {
+  opacity: 0;
+}
+.colaborator:hover .social a {
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  /* Safari */
+
+  opacity: 1;
+}
+.colaborator:hover img {
+  opacity: 0.5;
+  -webkit-transition: all .5s;
+  /* Safari */
+
+  opacity: .5;
+}
+.social a {
+  left: 55%;
+  float: right;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50px;
+  height: 75px;
+  width: 75px;
+  line-height: 50px;
+  color: #0099cc;
+  z-index: 111;
+  box-shadow: 0px 0px 10px #333;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .social a {
+    height: 55px;
+    width: 55px;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 15px;
+  }
+  .social a i {
+    font-size: 2em;
+  }
+}
+.colaborator:hover .social a.facebook {
+  margin-top: 75px;
+  background-color: #0a5175;
+  color: #fff;
+  left: 76%;
+}
+.colaborator:hover .social a.twitter {
+  left: 66%;
+}
+.colaborator:hover .social a.deviant {
+  margin-top: 75px;
+  background-color: #bdd023;
+  color: #fff;
+  left: 76%;
+}
+.colaborator .descUser {
+  position: relative;
+  opacity: 0;
+  top: -10px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  /* Safari */
+}
+.colaborator:hover .descUser {
+  opacity: 1;
+  top: 10px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  /* Safari */
+}
+/* Contact */
+.forContact {
+  color: #fff;
+  padding-top: 50px;
+}
+.forContact label {
+  color: #fff;
+}
+.forContact textarea {
+  height: 205px;
+  resize: none;
+  width: 100% !important;
+}
+.forContact .twitterFeed iframe {
+  width: 100% !important;
+}
+/* Contact */
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.top-scroll {
+  margin-top: 50px;
+}
+.top-scroll a {
+  text-decoration: none;
+  color: inherit;
+}
+i.scroll {
+  color: #333333;
+}
+i.scroll:hover {
+  color: #0a5175;
+}
+footer .socialLinks li {
+  display: inline-table;
+  margin-left: 1em;
+}
+footer .socialLinks a i {
+  color: #fff;
+}
+footer .socialLinks a i:hover {
+  text-shadow: 0px 0px 7px #333, 0px 0px 3px #f2f2f2;
+}
+footer .socialLinks a i.fa-facebook:hover {
+  color: #0a5175;
+}
+footer .socialLinks a i.fa-twitter:hover {
+  color: #0099cc;
+}
+footer .socialLinks a i.fa-linkedin:hover {
+  color: #0a5175;
+}
+footer .socialLinks a i.fa-youtube:hover {
+  color: #c13650;
+}
+footer .socialLinks a i.fa-google-plus:hover {
+  color: #c13650;
+}
+footer .socialLinks a i.fa-tumblr-square:hover {
+  color: #36465D;
+}
+footer .socialLinks a i.el-icon-deviantart:hover {
+  color: #bdd023;
+}
+/***************/
+.effect {
+  border: 10px solid red;
+}
