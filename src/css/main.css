@@ -179,7 +179,7 @@ a.anchor {
 }
 /* Global CSS that are applied for all screen sizes */
 .tenthNav {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   font-weight: 300;
   margin-top: 1.5em;
   -webkit-transition: all 2s;
@@ -234,6 +234,7 @@ a.anchor {
 }
 /* Adding some background color to the different menu items */
 .tenthNav .menuItem {
+  background: #262f35;
   -webkit-transition: background 1s;
   -moz-transition: background 1s;
   -o-transition: background 1s;

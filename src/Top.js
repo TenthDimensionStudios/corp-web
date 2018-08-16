@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Lang from './data/Lang';
 import axios from 'axios';
 import TopRow from './TopRow';
-import 'react-sticky-header/styles.css';
-import StickyHeader from 'react-sticky-header';
 
 class Top extends Component {
 
@@ -39,59 +37,51 @@ class Top extends Component {
 
     render() {  
         var collapseCName = this.state.selected ? "languageMenu row animated fadeInDown collapse" : "languageMenu row animated fadeInDown "; 
-        
-        const Header = 
-            <StickyHeader
-            header={
-                <div className="container sticky">
-                    <nav id="menu" className="tenthNav row">
-                        <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated2s fadeInDown">
-                            <a href="#services">
-                                <span className="icon">
-                                    <i aria-hidden="true" className="icon-services"></i>
-                                </span>
-                                <span>{this.props.translate.Services}</span>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated3s fadeInDown">
-                            <a href="#portfolio">
-                                <span className="icon">
-                                    <i aria-hidden="true" className="icon-portfolio"></i>
-                                </span>
-                                <span>{this.props.translate.Portfolio}</span>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated4s fadeInDown">
-                            <a href="#team">
-                                <span className="icon">
-                                    <i aria-hidden="true" className="icon-team"></i>
-                                </span>
-                                <span>{this.props.translate.Team}</span>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-xs-3 menuItem animated5s fadeInDown">
-                            <a href="#contact">
-                                <span className="icon">
-                                    <i aria-hidden="true" className="icon-contact"></i>
-                                </span>
-                                <span>{this.props.translate.Contact}</span>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-            } />
-        
 
       return (  
         <div id="top" className="header col-md-12">   
             <div className="vert-text">
             
-                <div className="menuPage row hidden-xs">
-
+                <nav className="menuPage row hidden-xs">
                     <div id="forHomeMenu" className="col-md-12 text-center forHomeMenu">
-                        {Header}                               
+                        <div className="navbar navbar-expand-lg navbar-light">
+                            <nav id="menu" className="tenthNav row col-12">
+                                <div className="col menuItem animated2s fadeInDown">
+                                    <a href="#services">
+                                        <span className="icon">
+                                            <i aria-hidden="true" className="icon-services"></i>
+                                        </span>
+                                        <span>{this.props.translate.Services}</span>
+                                    </a>
+                                </div>
+                                <div className="col menuItem animated3s fadeInDown">
+                                    <a href="#portfolio">
+                                        <span className="icon">
+                                            <i aria-hidden="true" className="icon-portfolio"></i>
+                                        </span>
+                                        <span>{this.props.translate.Portfolio}</span>
+                                    </a>
+                                </div>
+                                <div className="col menuItem animated4s fadeInDown">
+                                    <a href="#team">
+                                        <span className="icon">
+                                            <i aria-hidden="true" className="icon-team"></i>
+                                        </span>
+                                        <span>{this.props.translate.Team}</span>
+                                    </a>
+                                </div>
+                                <div className="col menuItem animated5s fadeInDown">
+                                    <a href="#contact">
+                                        <span className="icon">
+                                            <i aria-hidden="true" className="icon-contact"></i>
+                                        </span>
+                                        <span>{this.props.translate.Contact}</span>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>                              
                     </div>
-                </div>
+                </nav>
 
                 <a href="#services">
                     <img src="img/logo_Tenth_white.png" className="logoTenth animated fadeInDown" alt="Tenth Dimension Studios Logotype" />

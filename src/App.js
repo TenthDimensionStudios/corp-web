@@ -50,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <div>        
-        {<Sidebar />}
+        {/*<Sidebar />*/}
 
         {<Top app={this} translate={this.state.translate} />}
 
