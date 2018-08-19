@@ -11,5 +11,6 @@ import './css/App.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+    <App/>, document.getElementById('app'));
 registerServiceWorker();

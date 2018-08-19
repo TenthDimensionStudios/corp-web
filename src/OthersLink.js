@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import Image from './Image'
 
-class OthersLink extends Component{
-    render(){
-        return(
-        <div className="col-sm-3 col-xs-6">
-            <a href="#" data-toggle="modal" data-target="#lightbox">
-                <img className="img-fluid portfolio-item" src={this.props.lnk}  alt="..." ng-click="modalLightbox(lnk,$event)"/>
-            </a>
-        </div>	
+class OthersLink extends Component {
+    render() {
+        return (
+            <div className="col-sm-3 col-xs-6">
+                <Image url={this.props.lnk} alt="..."/>
+            </div>
         );
     }
-}  
+}
 
 export default OthersLink;
